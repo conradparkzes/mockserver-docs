@@ -93,9 +93,8 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation',
           },
-          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/conradparkzes/mockserver-docs',
             label: 'GitHub',
@@ -107,28 +106,32 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Documentation',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Getting Started',
+                to: '/',
+              },
+              {
+                label: 'Mobile Money Providers',
+                to: '/category/mock-server---providers',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Providers',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'MVola',
+                to: '/category/mvola',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Orange Money',
+                to: '/category/orange-money',
               },
               {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Airtel Money',
+                to: '/category/airtel-money',
               },
             ],
           },
@@ -136,17 +139,13 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/conradparkzes/mockserver-docs',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Papi Mock Server Documentation.`,
       },
       prism: {
         theme: prismThemes.github,
