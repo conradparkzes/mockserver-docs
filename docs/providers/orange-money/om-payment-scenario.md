@@ -18,7 +18,7 @@ First, you need to obtain an access token that will be used for subsequent API c
 
 **Headers:**
 ```
-X-Custom-Authorization: Basic your_token
+Authorization: Basic your_token
 ```
 
 **Request Body (URL-encoded):**
@@ -55,7 +55,7 @@ Using the `access_token` from Step 1, initiate a webpayment transaction.
 
 **Headers:**
 ```
-X-Custom-Authorization: Bearer {access_token_from_step_1}
+Authorization: Bearer {access_token_from_step_1}
 Content-Type: application/json
 ```
 
@@ -156,7 +156,7 @@ Otp=25698
 
 ### Headers Explained
 
-- **X-Custom-Authorization**: 
+- **Authorization**: 
   - Step 1: Use `Basic your_initial_token`
   - Step 2: Use `Bearer {access_token_from_step_1}`
 - **Content-Type**: 

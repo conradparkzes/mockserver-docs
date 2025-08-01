@@ -18,7 +18,7 @@ First, you need to obtain an access token that will be used for subsequent API c
 
 **Headers:**
 ```
-X-Custom-Authorization: Basic your_token
+Authorization: Basic your_token
 Content-Type: application/x-www-form-urlencoded
 ```
 
@@ -46,7 +46,7 @@ scope=EXT_INT_MVOLA_SCOPE
 }
 ```
 
-> **Important:** Save the `access_token` from the success response, as you'll need to use this token (not your initial authorization token) in the `X-Custom-Authorization` header for both Steps 2 and 3.
+> **Important:** Save the `access_token` from the success response, as you'll need to use this token (not your initial authorization token) in the `Authorization` header for both Steps 2 and 3.
 
 ### Step 2: Initiate Payment
 
@@ -56,7 +56,7 @@ Using the `access_token` from Step 1, initiate a payment transaction.
 
 **Headers:**
 ```
-X-Custom-Authorization: Basic {access_token_from_step_1}
+Authorization: Basic {access_token_from_step_1}
 X-correlationID: dsq;,dvbwfghlkarhkfs
 version: 1.0
 Content-Type: application/json
@@ -126,7 +126,7 @@ Use the `serverCorrelationId` from Step 2 and the `access_token` from Step 1 to 
 
 **Headers:**
 ```
-X-Custom-Authorization: Basic {access_token_from_step_1}
+Authorization: Basic {access_token_from_step_1}
 X-CorrelationID: {serverCorrelationId}
 partnerName: Ibonia
 UserAccountIdentifier: msisdn;0386206745
@@ -173,7 +173,7 @@ UserAccountIdentifier: msisdn;0386206745
 
 ### Headers Explained
 
-- **X-Custom-Authorization**: Use the `access_token` obtained from Step 1 (not your initial authorization token)
+- **Authorization**: Use the `access_token` obtained from Step 1 (not your initial authorization token)
 - **X-correlationID**: Unique identifier for request tracking
 - **version**: API version (use "1.0")
 - **partnerName**: Your organization's partner name

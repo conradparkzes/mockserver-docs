@@ -55,7 +55,7 @@ Using the `access_token` from Step 1, initiate a payment transaction.
 
 **Headers:**
 ```
-X-Custom-Authorization: Bearer {access_token_from_step_1}
+Authorization: Bearer {access_token_from_step_1}
 X-Country: MG
 X-Currency: MGA
 ```
@@ -119,7 +119,7 @@ Use the reference `id` from Step 2 along with the Bearer token. The reference id
 
 **Headers:**
 ```
-X-Custom-Authorization: Bearer {access_token_from_step_1}
+Authorization: Bearer {access_token_from_step_1}
 X-Country: MG
 X-Currency: MGA
 version: 1.0
@@ -184,7 +184,7 @@ None (GET request)
 
 ### Headers Explained
 
-- **X-Custom-Authorization**: 
+- **Authorization**: 
   - Step 1: Not required
   - Steps 2 & 3: Use `Bearer {access_token_from_step_1}`
 - **X-Country**: Country code for the transaction (e.g., "MG")
@@ -202,7 +202,7 @@ Common error scenarios to handle in your integration:
 
 ### Step 2 - Payment Initiation Errors
 - **Invalid Authorization**: Verify your access token is valid and not expired (180 seconds)
-- **Missing Headers**: Ensure all required headers (`X-Custom-Authorization`, `X-Country`, `X-Currency`) are included
+- **Missing Headers**: Ensure all required headers (`Authorization`, `X-Country`, `X-Currency`) are included
 - **Invalid Parameters**: Verify phone number format and transaction details
 
 ### Step 3 - Status Check Errors
